@@ -1,0 +1,26 @@
+
+state={
+	id=848
+	name="STATE_848"
+	manpower = 154354
+	state_category = pastoral
+	history={
+		owner = FKR
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = FKR
+		add_claim_by = FKR
+		1938.3.12 = {
+			owner = NRC
+			controller = NRC
+			add_core_of = NRC
+		}
+	}
+	provinces={
+		6678 6680 
+	}
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
