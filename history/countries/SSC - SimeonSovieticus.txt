@@ -6,7 +6,10 @@ set_technology = {
 }
 
 set_convoys = 10
-
+set_research_slots = 3
+add_army_experience = 30
+add_navy_experience = 30
+add_air_experience = 30
 
 set_politics = {
 	ruling_party = communism
