@@ -1,0 +1,8 @@
+ideas = {
+	country = {
+
+		nrc_plan_gospodarczy_darwinkaczmarek = {
+			picture = nrc_plan_gospodarczy_darwinkaczmarek-644343
+		}
+	}
+}

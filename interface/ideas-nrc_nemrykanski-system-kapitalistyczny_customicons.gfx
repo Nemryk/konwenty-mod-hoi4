@@ -1,0 +1,9 @@
+spriteTypes = { 
+	##Icon For: Plan gospodarczy Darwin-Kaczmarek
+	SpriteType = { 
+		name = "GFX_idea_nrc_plan_gospodarczy_darwinkaczmarek-644343"
+		texturefile = "gfx/interface/ideas/nemrykanski-system-kapitalistyczny-ideas/nrc_plan_gospodarczy_darwinkaczmarek-644343.dds"
+	}
+
+ 
+ }

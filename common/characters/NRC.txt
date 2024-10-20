@@ -1,0 +1,15 @@
+characters = {
+	NRC_jan_kaczmarek = {
+		name=NRC_jankaczmarek
+		portraits = {
+			civilian = {
+				large="GFX_portrait_jankaczmarek"
+			}
+		}	
+		country_leader = {
+			ideology=nemricanism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

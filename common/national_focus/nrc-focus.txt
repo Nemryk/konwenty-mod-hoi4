@@ -1,0 +1,620 @@
+focus_tree = {
+	id = nrc-focus
+	continuous_focus_position = { x = 1500 y = 1150 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = NRC
+		}
+	}
+	#Edykt pierwszego obywatela
+	focus = {
+		id = ALB_edykt_pierwszego_obywatela
+		icon = GFX_focus_fra_devalue_the_franc
+		x = 10
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 200
+			add_stability = 0.1
+		}
+	}
+
+	#Wizyta w Wolframkach
+	focus = {
+		id = ALB_wizyta_w_wolframkach
+		icon = GFX_ALB_wizyta_w_wolframkach-645769
+		x = 9
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = ALB_edykt_pierwszego_obywatela  }
+	}
+
+	#Stworzenie nowego sztabu generalnego
+	focus = {
+		id = ALB_stworzenie_nowego_sztabu_generalnego
+		icon = GFX_ALB_stworzenie_nowego_sztabu_generalnego-645957
+		x = 15
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = ALB_edykt_pierwszego_obywatela  }
+	}
+
+	#Działo gruntołamacz 18 cm
+	focus = {
+		id = ALB_dzialogruntolamacz18cm
+		icon = GFX_goal_generic_army_artillery2
+		x = 7
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = ALB_edykt_pierwszego_obywatela  }
+	}
+
+	#Powstanie AA
+	focus = {
+		id = ALB_powstanie_aa
+		icon = GFX_ALB_powstanie_aa-645750
+		x = 3
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ALB_edykt_pierwszego_obywatela  }
+	}
+
+	#Nowa koncepcja wojny
+	focus = {
+		id = ALB_nowa_koncepcja_wojny
+		icon = GFX_goal_generic_army_motorized
+		x = 8
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = ALB_edykt_pierwszego_obywatela  }
+	}
+
+	#Nowe treningi wojskowe
+	focus = {
+		id = ALB_nowe_treningi_wojskowe
+		icon = GFX_focus_chi_army_reform
+		x = 15
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ALB_stworzenie_nowego_sztabu_generalnego  }
+	}
+
+	#Rewolucja pola bitwy
+	focus = {
+		id = ALB_rewolucja_pola_bitwy
+		icon = GFX_focus_rocketry
+		x = 6
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = ALB_dzialogruntolamacz18cm  } prerequisite = { focus = ALB_nowa_koncepcja_wojny  }
+	}
+
+	#Okultystyczna jednostka specjalna
+	focus = {
+		id = ALB_okultystyczna_jednostka_specjalna
+		icon = GFX_ALB_okultystyczna_jednostka_specjalna-646280
+		x = 1
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = ALB_powstanie_aa  }
+	}
+
+	#Inframex
+	focus = {
+		id = ALB_inframex
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 13
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ALB_edykt_pierwszego_obywatela  }
+	}
+
+	#Unia konstrukcyjna
+	focus = {
+		id = ALB_unia_konstrukcyjna
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 12
+		y = 3
+		cost = 15
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ALB_inframex  }
+	}
+
+	#Konglomerat wojskowy
+	focus = {
+		id = ALB_konglomerat_wojskowy
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 14
+		y = 3
+		cost = 15
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ALB_inframex  }
+	}
+
+	#Rozwiązanie traktatu przyjaźni
+	focus = {
+		id = ALB_rozwiazanietraktatuprzyjazni
+		icon = GFX_ALB_rozwiazanietraktatuprzyjazni-270
+		x = 9
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = ALB_rewolucja_pola_bitwy  } prerequisite = { focus = ALB_unia_konstrukcyjna  } prerequisite = { focus = ALB_konglomerat_wojskowy  } prerequisite = { focus = ALB_wizyta_w_wolframkach  }
+	}
+
+	#Stwórz K.K.L.
+	focus = {
+		id = ALB_stworzkkl
+		icon = GFX_ALB_stworzkkl-262010
+		x = 14
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = ALB_nowe_treningi_wojskowe  } prerequisite = { focus = ALB_konglomerat_wojskowy  }
+	}
+
+	#Powstanie Hierarchonarodów
+	focus = {
+		id = ALB_powstaniehierarchonarodow
+		icon = GFX_focus_ger_reichskommisariats
+		x = 3
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_FRA_OCCUPATION_COST
+		}
+		prerequisite = { focus = ALB_powstanie_aa  }
+	}
+
+	#Przygotować wyprawy
+	focus = {
+		id = ALB_przygotowacwyprawy
+		icon = GFX_ALB_przygotowacwyprawy-646198
+		x = 1
+		y = 5
+		cost = 15
+		search_filters = {
+			FOCUS_FILTER_MEX_CHURCH_AUTHORITY
+		}
+		prerequisite = { focus = ALB_okultystyczna_jednostka_specjalna  }
+	}
+
+	#Przygotowanie koncepcji uniwersalnego okrętu
+	focus = {
+		id = ALB_przygotowaniekoncepcjiuniwersalnegookretu
+		icon = GFX_ALB_przygotowaniekoncepcjiuniwersalnegookretu-646316
+		x = 10
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = ALB_morski_pakt  }
+	}
+
+	#Morski pakt
+	focus = {
+		id = ALB_morski_pakt
+		icon = GFX_ALB_morski_pakt-645974
+		x = 11
+		y = 5
+		cost = 15
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ALB_unia_konstrukcyjna  } prerequisite = { focus = ALB_rozwiazanietraktatuprzyjazni  }
+	}
+
+	#Koncepcja kolosa
+	focus = {
+		id = ALB_koncepcja_kolosa
+		icon = GFX_ALB_koncepcja_kolosa-646233
+		x = 15
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = ALB_stworzkkl  }
+	}
+
+	#Ekorewolucja Północy
+	focus = {
+		id = ALB_ekorewolucjapolnocy
+		icon = GFX_ALB_ekorewolucjapolnocy-645815
+		x = 9
+		y = 10
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = ALB_ultimatum_dla_gractwa  } prerequisite = { focus = ALB_przygotowaniekoncepcjiuniwersalnegookretu  }
+	}
+
+	#Ostateczne rozwiązanie
+	focus = {
+		id = ALB_ostatecznerozwiazanie
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 3
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ALB_powstaniehierarchonarodow  }
+	}
+
+	#Wizyta w Szymonopolis
+	focus = {
+		id = ALB_wizyta_w_szymonopolis
+		icon = GFX_ALB_wizyta_w_szymonopolis-262130
+		x = 6
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ALB_rozwiazanietraktatuprzyjazni  }
+	}
+
+	#Kongres technokratyczny
+	focus = {
+		id = ALB_kongres_technokratyczny
+		icon = GFX_ALB_kongres_technokratyczny-645515
+		x = 6
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ALB_wizyta_w_szymonopolis  }
+	}
+
+	#Dyplomatyczne Rozwiązanie Malarzawki
+	focus = {
+		id = ALB_dyplomatycznerozwiazaniemalarzawki
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 5
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ALB_kongres_technokratyczny  }
+	}
+
+	#Wojskowe rozwiązanie Malarzawki
+	focus = {
+		id = ALB_wojskowerozwiazaniemalarzawki
+		icon = GFX_goal_generic_major_war
+		x = 7
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ALB_kongres_technokratyczny  }
+		mutually_exclusive = { focus = ALB_dyplomatycznerozwiazaniemalarzawki  }
+	}
+
+	#Ostatnia wizyta w DA
+	focus = {
+		id = ALB_ostatnia_wizyta_w_da
+		icon = GFX_ALB_ostatnia_wizyta_w_da-645583
+		x = 6
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ALB_dyplomatycznerozwiazaniemalarzawki  focus = ALB_wojskowerozwiazaniemalarzawki  }
+	}
+
+	#Ultimatum dla Gractwa
+	focus = {
+		id = ALB_ultimatum_dla_gractwa
+		icon = GFX_focus_focus_fra_border
+		x = 8
+		y = 9
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ALB_ostatnia_wizyta_w_da  }
+	}
+
+	#Klasa Cesarz Oceanu
+	focus = {
+		id = ALB_klasa_cesarz_oceanu
+		icon = GFX_focus_generic_navy_battleship2
+		x = 11
+		y = 8
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ALB_przygotowaniekoncepcjiuniwersalnegookretu  }
+	}
+
+	#Nieskończona wojna podwodna
+	focus = {
+		id = ALB_nieskonczonawojnapodwodna
+		icon = GFX_goal_generic_navy_submarine
+		x = 10
+		y = 11
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ALB_ekorewolucjapolnocy  } prerequisite = { focus = ALB_klasa_cesarz_oceanu  }
+	}
+
+	#Sygnitowanie traktatu Nowej Wizji
+	focus = {
+		id = ALB_sygnitowanie_traktatu_nowej_wizji
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 6
+		y = 10
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ALB_ultimatum_dla_gractwa  }
+	}
+
+	#Karczma zamknięta
+	focus = {
+		id = ALB_karczmazamknieta
+		icon = GFX_ALB_karczmazamknieta-280
+		x = 6
+		y = 12
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ALB_sygnitowanie_traktatu_nowej_wizji  }
+	}
+
+	#Zforsujmy twierdze kaczora
+	focus = {
+		id = ALB_zforsujmy_twierdze_kaczora
+		icon = GFX_ALB_zforsujmy_twierdze_kaczora-646290
+		x = 7
+		y = 11
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ALB_sygnitowanie_traktatu_nowej_wizji  }
+	}
+
+	#Rządania wobec imperium
+	focus = {
+		id = ALB_rzadaniawobecimperium
+		icon = GFX_goal_demand_sudetenland
+		x = 8
+		y = 12
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ALB_sygnitowanie_traktatu_nowej_wizji  }
+	}
+
+	#Żabi skok
+	focus = {
+		id = ALB_zabiskok
+		icon = GFX_ALB_zabiskok-646008
+		x = 7
+		y = 13
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ALB_karczmazamknieta  } prerequisite = { focus = ALB_rzadaniawobecimperium  } prerequisite = { focus = ALB_zforsujmy_twierdze_kaczora  }
+	}
+
+	#Projekt: Quetzalcoatl
+	focus = {
+		id = ALB_projektquetzalcoatl
+		icon = GFX_focus_generic_army_tanks2
+		x = 17
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = ALB_edykt_pierwszego_obywatela  }
+	}
+
+	#Podniebny czołg
+	focus = {
+		id = ALB_podniebnyczolg
+		icon = GFX_ALB_podniebnyczolg-646160
+		x = 13
+		y = 8
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = ALB_koncepcja_kolosa  }
+	}
+
+	#Zniszczyć fandom
+	focus = {
+		id = ALB_zniszczycfandom
+		icon = GFX_focus_BUL_destroy_the_zveno
+		x = 12
+		y = 10
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = ALB_klasa_cesarz_oceanu  } prerequisite = { focus = ALB_podniebnyczolg  }
+	}
+
+	#Wsparcie dla naszych ziem cerackich
+	focus = {
+		id = ALB_wsparcie_dla_naszych_ziem_cerackich
+		icon = GFX_focus_generic_africa_factory
+		x = 18
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+
+	#Cosplayerki trzeba "Naprawić"
+	focus = {
+		id = ALB_cosplayerkitrzebanaprawic
+		icon = GFX_focus_generic_africa_production
+		x = 18
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ALB_projektquetzalcoatl  } prerequisite = { focus = ALB_wsparcie_dla_naszych_ziem_cerackich  }
+	}
+
+	#Rozbudowa stolicy
+	focus = {
+		id = ALB_rozbudowa_stolicy
+		icon = GFX_ALB_rozbudowa_stolicy-645698
+		x = 21
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+
+	#Dajmy wędki
+	focus = {
+		id = ALB_dajmywedki
+		icon = GFX_ALB_dajmywedki-645464
+		x = 21
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ALB_rozbudowa_stolicy  }
+	}
+
+	#Wszechwidzący
+	focus = {
+		id = ALB_wszechwidzacy
+		icon = GFX_ALB_wszechwidzacy-262043
+		x = 19
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ALB_cosplayerkitrzebanaprawic  } prerequisite = { focus = ALB_dajmywedki  }
+	}
+
+	#Renata! Jest zadanie...
+	focus = {
+		id = ALB_renatajestzadanie
+		icon = GFX_focus_jap_cast_the_die
+		x = 10
+		y = 13
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = ALB_nieskonczonawojnapodwodna  }
+	}
+
+	#Nieskończony potencjał
+	focus = {
+		id = ALB_nieskonczonypotencjal
+		icon = GFX_ALB_nieskonczonypotencjal-645855
+		x = 18
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = ALB_wszechwidzacy  } prerequisite = { focus = ALB_koncepcja_kolosa  }
+	}
+
+	#Nauka jest wspaniała
+	focus = {
+		id = ALB_naukajestwspaniala
+		icon = GFX_ALB_naukajestwspaniala-645479
+		x = 1
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ALB_przygotowacwyprawy  }
+	}
+
+	#Nasza wizja świata
+	focus = {
+		id = ALB_naszawizjaswiata
+		icon = GFX_focus_usa_focus_on_europe
+		x = 13
+		y = 14
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = ALB_zabiskok  } prerequisite = { focus = ALB_nieskonczonypotencjal  } prerequisite = { focus = ALB_renatajestzadanie  } prerequisite = { focus = ALB_zniszczycfandom  }
+	}
+
+	#Wojna robi się zimna...
+	focus = {
+		id = ALB_wojnarobisiezimna
+		icon = GFX_ALB_wojnarobisiezimna-645844
+		x = 13
+		y = 15
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ALB_naszawizjaswiata  }
+	}
+
+}

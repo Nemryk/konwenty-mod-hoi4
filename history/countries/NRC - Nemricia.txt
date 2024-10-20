@@ -21,3 +21,14 @@ set_popularities = {
 	communism = 10
 	socialdarwinism = 90
 }
+
+create_country_leader = {
+	name = "Jan Kaczmarek"
+	picture = portrait_jankaczmarek
+	 desc = "A visionary leader known for his strategic genius and charismatic presence."
+	expire = "1965.1.1"
+	ideology = nemricanism 
+	traits = {	
+		dictator
+	}
+}
